@@ -16,13 +16,11 @@ namespace Catalog.API.Products.DeleteProduct
         }
     }
 
-    public class DeleteProductCommandHandler(IDocumentSession session, ILogger<DeleteProductCommandHandler> logger)
+    public class DeleteProductCommandHandler(IDocumentSession session)
     : IQueryHandler<DeleteProductCommand, DeleteProductResult>
     {
         public async Task<DeleteProductResult> Handle(DeleteProductCommand command, CancellationToken cancellationToken)
         {
-            logger.LogInformation("DeleteProductQueryHandler.Handle called with {@Query}", command);
-
             session.Delete<Product>(command.Id);
 
             await session.SaveChangesAsync(cancellationToken);
