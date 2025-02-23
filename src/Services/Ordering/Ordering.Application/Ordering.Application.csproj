@@ -12,15 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Exceptions\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Orders\Commands\DeleteOrder\" />
-    <Folder Include="Orders\Commands\UpdateOrder\" />
-    <Folder Include="Orders\EventHandlers\Domain\" />
     <Folder Include="Orders\EventHandlers\Integration\" />
-    <Folder Include="Orders\Queries\GetOrders\" />
-    <Folder Include="Orders\Queries\GetOrdersByCustomer\" />
-    <Folder Include="Orders\Queries\GetOrdersByName\" />
   </ItemGroup>
 
   <ItemGroup>
